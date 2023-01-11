@@ -8,13 +8,7 @@ import typescript from "@rollup/plugin-typescript";
 export default [
   {
     input: "./src/index.ts",
-    external: [
-      "react",
-      "react-dom",
-      "styled-components",
-      "prop-types",
-      "react-icons",
-    ],
+    external: ["react", "react-dom", "styled-components"],
     plugins: [
       peerDepsExternal(),
       resolve(),
@@ -35,7 +29,9 @@ export default [
           },
         ],
       }),
+
       babel({
+        plugins: ["babel-plugin-styled-components"],
         babelHelpers: "runtime",
         exclude: "**/node_modules/**",
         presets: ["@babel/preset-env", "@babel/preset-react"],
@@ -50,6 +46,10 @@ export default [
       },
       {
         file: "dist/index.es.js",
+        format: "es",
+      },
+      {
+        file: "dist/index.d.ts",
         format: "es",
       },
     ],

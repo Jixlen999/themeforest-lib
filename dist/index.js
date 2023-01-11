@@ -1,6 +1,4 @@
-"use strict";var e=require("react");const t=require("styled-components").div`
-  background-color: green;
-  color: white;
-  width: 200px;
-  height: 100px;
-`;exports.MyButton=()=>e.createElement(t,null,"MyButton");
+"use strict";var e=require("react");const r=require("styled-components").div`
+  color: green;
+  background-color: black;
+`;exports.MyButton=()=>e.createElement(r,null,"AAsadsad");

@@ -1,6 +1,6 @@
 import React from "react";
-import { Button } from "./styled";
+import { Text } from "./styled";
 
 export const MyButton = () => {
-  return <Button>MyButton</Button>;
+  return <Text>AAsadsad</Text>;
 };

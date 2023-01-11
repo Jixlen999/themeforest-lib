@@ -1,8 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const Button = styled.div`
-  background-color: red;
-  color: white;
-  width: 200px;
-  height: 100px;
+export const Text = styled.div`
+  color: green;
+  background-color: black;
 `;
