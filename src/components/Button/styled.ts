@@ -1,20 +1,27 @@
+import { ReactNode } from "react";
 import styled from "styled-components";
 
 interface IButton {
-  state: "enabled" | "hovered" | "pressed" | "disabled";
   width: number;
   height: number;
+  icon: ReactNode;
+  disabled: boolean;
+}
+
+interface IButtonText {
+  fontSize?: number;
+  fontWeight?: number;
 }
 
 export const ButtonWrapper = styled.div<IButton>`
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 0 5px;
   width: ${({ width }) => width}px;
   height: ${({ height }) => height}px;
   border-radius: ${({ theme }) => theme.borderRadius[6]}px;
-  background-color: ${({ theme, state }) => {
-    if (state === "enabled") return theme.colors.primary;
-    if (state === "disabled") return theme.colors.grey;
+  background-color: ${({ theme, disabled }) => {
+    if (disabled) return theme.colors.grey;
+    return theme.colors.primary;
   }};
   display: flex;
   flex-direction: row;
@@ -22,24 +29,42 @@ export const ButtonWrapper = styled.div<IButton>`
   align-items: center;
   gap: ${({ theme }) => theme.gap[10]}px;
   color: ${({ theme }) => theme.colors.white};
-  cursor: ${({ state }) => state === "enabled" && "pointer"};
+  cursor: ${({ disabled }) => {
+    if (disabled) return "not-allowed";
+    return "pointer";
+  }};
   transition: ${({ theme }) => theme.transition};
-  box-shadow: ${({ theme }) => theme.shadows.button};
+  box-shadow: ${({ theme, disabled }) => {
+    if (disabled) return "none";
+    return theme.shadows.button;
+  }};
   &:hover {
-    background-color: ${({ theme, state }) =>
-      state === "enabled" && theme.colors.hoverBlue};
+    background-color: ${({ theme, disabled }) =>
+      !disabled && theme.colors.hoverBlue};
   }
   &:active {
-    box-shadow: ${({ state }) => state === "enabled" && "none"};
-    background-color: ${({ theme, state }) =>
-      state === "enabled" && theme.colors.primary};
+    box-shadow: ${({ disabled }) => !disabled && "none"};
+    background-color: ${({ theme, disabled }) =>
+      !disabled && theme.colors.primary};
   }
 `;
 
-export const ButtonText = styled.p`
+export const ButtonText = styled.p<IButtonText>`
   font-family: ${({ theme }) => theme.fontFamily.Manrope};
-  font-weight: ${({ theme }) => theme.fontWeight[700]};
-  font-size: ${({ theme }) => theme.fontSize[16]}px;
+  font-weight: ${({ theme, fontWeight }) =>
+    fontWeight ? fontWeight : theme.fontWeight[700]};
+  font-size: ${({ theme, fontSize }) =>
+    fontSize ? fontSize : theme.fontSize[16]}px;
   line-height: ${({ theme }) => theme.lineHeight[24]}px;
   overflow: hidden;
+`;
+
+export const Icon = styled.div`
+  display: flex;
+  align-items: center;
+  svg {
+    margin: 0;
+    width: 24px;
+    height: 24px;
+  }
 `;

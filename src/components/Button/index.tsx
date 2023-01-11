@@ -1,33 +1,47 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
+
 import theme from "../../../theme";
 
-import { ButtonWrapper, ButtonText } from "./styled";
+import { ButtonWrapper, ButtonText, Icon } from "./styled";
 
 export interface IButtonProps {
-  state: "enabled" | "hovered" | "pressed" | "disabled";
   width: number;
   height: number;
   text: string;
-  onClick?: () => {};
+  icon?: JSX.Element;
+  disabled: boolean;
+  onClick: () => {};
+  fontSize: number;
+  fontWeight: number;
 }
 
 export const Button = ({
-  state = "enabled",
   width = 200,
   height = 60,
   text = "Button text",
+  disabled = false,
   onClick,
+  ...rest
 }: IButtonProps) => {
+  const { icon, fontSize, fontWeight } = rest;
+
   return (
     <ThemeProvider theme={theme}>
       <ButtonWrapper
-        state={state}
         width={width}
         height={height}
-        onClick={onClick}
+        onClick={!disabled ? onClick : undefined}
+        disabled={disabled}
+        icon={icon ? icon : null}
       >
-        <ButtonText> {text}</ButtonText>
+        {icon && <Icon>{icon}</Icon>}
+        <ButtonText
+          fontSize={fontSize && fontSize}
+          fontWeight={fontWeight && fontWeight}
+        >
+          {text}
+        </ButtonText>
       </ButtonWrapper>
     </ThemeProvider>
   );

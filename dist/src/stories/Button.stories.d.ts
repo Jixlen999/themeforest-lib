@@ -2,19 +2,22 @@
 import { ComponentStory } from "@storybook/react";
 declare const _default: {
     title: string;
-    component: ({ state, width, height, text, onClick, }: import("../components/Button").IButtonProps) => JSX.Element;
+    component: ({ width, height, text, disabled, onClick, ...rest }: import("../components/Button").IButtonProps) => JSX.Element;
     argTypes: {
-        state: {
+        disabled: {
             control: string;
-            options: string[];
+        };
+        icon: {
+            control: string;
         };
     };
     args: {
         text: string;
         width: number;
         height: number;
-        state: string;
     };
 };
 export default _default;
-export declare const Default: ComponentStory<({ state, width, height, text, onClick, }: import("../components/Button").IButtonProps) => JSX.Element>;
+export declare const Basic: ComponentStory<({ width, height, text, disabled, onClick, ...rest }: import("../components/Button").IButtonProps) => JSX.Element>;
+export declare const WithIconAndSizesConfigure: ComponentStory<({ width, height, text, disabled, onClick, ...rest }: import("../components/Button").IButtonProps) => JSX.Element>;
+export declare const Disabled: ComponentStory<({ width, height, text, disabled, onClick, ...rest }: import("../components/Button").IButtonProps) => JSX.Element>;
