@@ -1,17 +1,6 @@
 import { ReactNode } from "react";
 import styled from "styled-components";
-
-interface IButton {
-  width: number;
-  height: number;
-  icon: ReactNode;
-  disabled: boolean;
-}
-
-interface IButtonText {
-  fontSize?: number;
-  fontWeight?: number;
-}
+import { IButton, IButtonText } from "../../types";
 
 export const ButtonWrapper = styled.div<IButton>`
   box-sizing: border-box;

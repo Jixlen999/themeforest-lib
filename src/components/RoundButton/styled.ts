@@ -1,22 +1,5 @@
-import { ReactNode } from "react";
 import styled from "styled-components";
-
-interface IRoundContainer {
-  width: number;
-  height: number;
-  disabled: boolean;
-}
-
-interface IRoundButton {
-  width: number;
-  height: number;
-  disabled: boolean;
-}
-
-interface IRoundButtonText {
-  fontSize?: number;
-  fontWeight?: number;
-}
+import { IRoundButton, IRoundButtonText, IRoundContainer } from "../../types";
 
 export const ButtonWrapper = styled.div<IRoundButton>`
   box-sizing: border-box;

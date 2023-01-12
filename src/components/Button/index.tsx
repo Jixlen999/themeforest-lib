@@ -2,19 +2,9 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 
 import theme from "../../../theme";
+import { IButtonProps } from "../../types";
 
 import { ButtonWrapper, ButtonText, Icon } from "./styled";
-
-export interface IButtonProps {
-  width: number;
-  height: number;
-  text: string;
-  icon?: JSX.Element;
-  disabled: boolean;
-  onClick: () => {};
-  fontSize: number;
-  fontWeight: number;
-}
 
 export const Button = ({
   width = 200,

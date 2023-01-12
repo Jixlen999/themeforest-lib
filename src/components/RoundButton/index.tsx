@@ -2,17 +2,9 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 
 import theme from "../../../theme";
+import { IRoundButtonProps } from "../../types";
 
 import { ButtonWrapper, ButtonText, ButtonContainer } from "./styled";
-
-export interface IRoundButtonProps {
-  size: number;
-  text: string;
-  disabled: boolean;
-  onClick: () => {};
-  fontSize: number;
-  fontWeight: number;
-}
 
 export const RoundButton = ({
   size = 200,
@@ -22,13 +14,14 @@ export const RoundButton = ({
   ...rest
 }: IRoundButtonProps) => {
   const { fontSize, fontWeight } = rest;
+  const fifteenPercent = 0.15;
 
   return (
     <ThemeProvider theme={theme}>
       <ButtonContainer width={size} height={size} disabled={disabled}>
         <ButtonWrapper
-          width={size - size * 0.15}
-          height={size - size * 0.15}
+          width={size - size * fifteenPercent}
+          height={size - size * fifteenPercent}
           onClick={!disabled ? onClick : undefined}
           disabled={disabled}
         >

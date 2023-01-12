@@ -19,5 +19,5 @@ declare const _default: {
 };
 export default _default;
 export declare const Basic: ComponentStory<({ width, height, text, disabled, onClick, ...rest }: import("../components/Button").IButtonProps) => JSX.Element>;
-export declare const WithIconAndSizesConfigure: ComponentStory<({ width, height, text, disabled, onClick, ...rest }: import("../components/Button").IButtonProps) => JSX.Element>;
 export declare const Disabled: ComponentStory<({ width, height, text, disabled, onClick, ...rest }: import("../components/Button").IButtonProps) => JSX.Element>;
+export declare const WithIconAndSizesConfigure: ComponentStory<({ width, height, text, disabled, onClick, ...rest }: import("../components/Button").IButtonProps) => JSX.Element>;
