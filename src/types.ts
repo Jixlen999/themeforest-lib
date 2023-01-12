@@ -29,22 +29,21 @@ export interface IButtonText {
   fontWeight?: number;
 }
 
-export interface IButtonProps {
-  width: number;
-  height: number;
-  text: string;
-  icon?: JSX.Element;
+interface ICommonButtonProps {
   disabled: boolean;
   onClick: () => {};
   fontSize: number;
   fontWeight: number;
 }
 
-export interface IRoundButtonProps {
+export interface IButtonProps extends ICommonButtonProps {
+  width: number;
+  height: number;
+  text: string;
+  icon?: JSX.Element;
+}
+
+export interface IRoundButtonProps extends ICommonButtonProps {
   size: number;
   text: string;
-  disabled: boolean;
-  onClick: () => {};
-  fontSize: number;
-  fontWeight: number;
 }
