@@ -5,7 +5,7 @@ import { BsPlayCircle } from "react-icons/bs";
 import { Button } from "../components/Button";
 
 export default {
-  title: "Example/Button",
+  title: "Button",
   component: Button,
   argTypes: {
     disabled: {

@@ -1,5 +1,7 @@
 declare const theme: {
     width: {
+        80: number;
+        110: number;
         141: number;
         185: number;
         350: number;
@@ -11,9 +13,12 @@ declare const theme: {
     height: {
         46: number;
         54: number;
+        60: number;
+        80: number;
         120: number;
         126: number;
         132: number;
+        370: number;
         580: number;
         590: number;
         740: number;
@@ -27,6 +32,7 @@ declare const theme: {
         16: number;
         20: number;
         22: number;
+        25: number;
         30: number;
         38: number;
         46: number;
@@ -42,6 +48,8 @@ declare const theme: {
     };
     gap: {
         10: number;
+        15: number;
+        25: number;
         30: number;
         40: number;
         46: number;
@@ -57,16 +65,27 @@ declare const theme: {
     };
     margin: {
         30: number;
+        50: number;
         75: number;
         80: number;
         90: number;
         120: number;
     };
     padding: {
+        10: number;
         25: number;
+        35: number;
     };
     borderRadius: {
         6: number;
+        20: number;
+        100: number;
+    };
+    scale: {
+        xs: number;
+    };
+    flexBasis: {
+        25: number;
     };
     transition: string;
     colors: {

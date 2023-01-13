@@ -1,7 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
 
-import theme from "../../../theme";
+import theme from "../../theme";
 import { IButtonProps } from "../../types";
 
 import { ButtonWrapper, ButtonText, Icon } from "./styled";

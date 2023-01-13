@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { IRoundButton, IRoundButtonText, IRoundContainer } from "../../types";
+import { IRoundButton, IButtonText, IRoundContainer } from "../../types";
 
 export const ButtonWrapper = styled.div<IRoundButton>`
   box-sizing: border-box;
@@ -16,7 +16,7 @@ export const ButtonWrapper = styled.div<IRoundButton>`
   background-color: transparent;
 `;
 
-export const ButtonText = styled.p<IRoundButtonText>`
+export const ButtonText = styled.p<IButtonText>`
   font-family: ${({ theme }) => theme.fontFamily.Manrope};
   font-weight: ${({ theme, fontWeight }) =>
     fontWeight ? fontWeight : theme.fontWeight[700]};

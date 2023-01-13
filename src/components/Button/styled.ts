@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import styled from "styled-components";
+
 import { IButton, IButtonText } from "../../types";
 
 export const ButtonWrapper = styled.div<IButton>`

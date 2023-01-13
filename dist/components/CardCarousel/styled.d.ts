@@ -1,0 +1,14 @@
+export declare const TitleAndControls: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const Title: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const Controls: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const ControlButton: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const Cards: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const Card: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const CardImage: import("styled-components").StyledComponent<"img", any, {}, never>;
+export declare const CardName: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const CardPosition: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const CardComment: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const CardHeader: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const CardNameAndPosition: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const ControlButtonRight: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const ControlButtonLeft: import("styled-components").StyledComponent<"div", any, {}, never>;

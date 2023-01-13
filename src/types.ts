@@ -12,16 +12,8 @@ export interface IRoundButton {
   disabled: boolean;
 }
 
-export interface IRoundButtonText {
-  fontSize?: number;
-  fontWeight?: number;
-}
-
-export interface IButton {
-  width: number;
-  height: number;
+export interface IButton extends IRoundButton {
   icon: ReactNode;
-  disabled: boolean;
 }
 
 export interface IButtonText {
@@ -29,21 +21,33 @@ export interface IButtonText {
   fontWeight?: number;
 }
 
-interface ICommonButtonProps {
-  disabled: boolean;
-  onClick: () => {};
-  fontSize: number;
-  fontWeight: number;
+interface ICommonButtonsProps {
+  disabled?: boolean;
+  onClick: () => void;
+  fontSize?: number;
+  fontWeight?: number;
 }
 
-export interface IButtonProps extends ICommonButtonProps {
+export interface IButtonProps extends ICommonButtonsProps {
   width: number;
   height: number;
   text: string;
   icon?: JSX.Element;
 }
 
-export interface IRoundButtonProps extends ICommonButtonProps {
+export interface IRoundButtonProps extends ICommonButtonsProps {
   size: number;
   text: string;
+}
+
+export interface ICard {
+  name: string;
+  image: string;
+  position: string;
+  comment: string;
+}
+
+export interface ICardCarouselProps {
+  title: string | undefined;
+  cards: Array<ICard>;
 }

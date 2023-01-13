@@ -4,7 +4,7 @@ import { ComponentStory } from "@storybook/react";
 import { RoundButton } from "../components/RoundButton";
 
 export default {
-  title: "Example/RoundButton",
+  title: "RoundButton",
   component: RoundButton,
   argTypes: {
     disabled: {
