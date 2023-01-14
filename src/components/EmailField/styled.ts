@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const EmailFieldWrapper = styled.div`
   width: 445px;
@@ -12,7 +12,7 @@ export const EmailInput = styled.input`
   padding: 15px 25px;
   background-color: transparent;
   border: none;
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -35,7 +35,7 @@ export const EmailButton = styled.div`
   background-color: white;
   color: ${({ theme }) => theme.colors.black};
   border-radius: 6px;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;

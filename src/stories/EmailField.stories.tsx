@@ -1,13 +1,13 @@
-import React from "react";
-import { ComponentStory } from "@storybook/react";
+import React from 'react';
+import { ComponentStory } from '@storybook/react';
 
-import { EmailField } from "../components/EmailField";
+import { EmailField } from '@components/EmailField';
 
 export default {
-  title: "EmailField",
+  title: 'EmailField',
   component: EmailField,
 };
 
-const Template: ComponentStory<typeof EmailField> = (args) => <EmailField />;
+const Template: ComponentStory<typeof EmailField> = () => <EmailField />;
 
 export const Basic = Template.bind({});

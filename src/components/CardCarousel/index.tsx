@@ -1,11 +1,11 @@
-import React from "react";
-import { ThemeProvider } from "styled-components";
-import {
-  HiOutlineArrowNarrowRight,
-  HiOutlineArrowNarrowLeft,
-} from "react-icons/hi";
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import { HiOutlineArrowNarrowRight, HiOutlineArrowNarrowLeft } from 'react-icons/hi';
 
-import theme from "../../theme";
+import theme from '@src/theme';
+import { ICardCarouselProps } from '@src/types';
+import useScroll from '@hooks/useScroll';
+
 import {
   Card,
   CardComment,
@@ -21,9 +21,7 @@ import {
   Controls,
   Title,
   TitleAndControls,
-} from "./styled";
-import { ICardCarouselProps } from "../../types";
-import useScroll from "../../hooks/useScroll";
+} from './styled';
 
 export const CardCarousel = ({ title, cards }: ICardCarouselProps) => {
   const { leftClickHandler, rightClickHandler } = useScroll();

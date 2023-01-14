@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { IRoundButton, IButtonText, IRoundContainer } from "../../types";
+import styled from 'styled-components';
+import { IRoundButton, IButtonText, IRoundContainer } from '@src/types';
 
 export const ButtonWrapper = styled.div<IRoundButton>`
   box-sizing: border-box;
@@ -18,10 +18,8 @@ export const ButtonWrapper = styled.div<IRoundButton>`
 
 export const ButtonText = styled.p<IButtonText>`
   font-family: ${({ theme }) => theme.fontFamily.Manrope};
-  font-weight: ${({ theme, fontWeight }) =>
-    fontWeight ? fontWeight : theme.fontWeight[700]};
-  font-size: ${({ theme, fontSize }) =>
-    fontSize ? fontSize : theme.fontSize[16]}px;
+  font-weight: ${({ theme, fontWeight }) => fontWeight || theme.fontWeight[700]};
+  font-size: ${({ theme, fontSize }) => fontSize || theme.fontSize[16]}px;
   line-height: ${({ theme }) => theme.lineHeight[24]}px;
   overflow: hidden;
 `;
@@ -38,17 +36,14 @@ export const ButtonContainer = styled.div<IRoundContainer>`
     return theme.colors.primary;
   }};
   cursor: ${({ disabled }) => {
-    if (disabled) return "not-allowed";
-    return "pointer";
+    if (disabled) return 'not-allowed';
+    return 'pointer';
   }};
   &:hover {
-    background-color: ${({ theme, disabled }) =>
-      !disabled && theme.colors.hoverBlue};
+    background-color: ${({ theme, disabled }) => !disabled && theme.colors.hoverBlue};
   }
   &:active {
-    background-color: ${({ theme, disabled }) =>
-      !disabled && theme.colors.primary};
+    background-color: ${({ theme, disabled }) => !disabled && theme.colors.primary};
   }
-  border: ${({ width }) => width * 0.08}px solid
-    ${({ theme }) => theme.colors.white};
+  border: ${({ width }) => width * 0.08}px solid ${({ theme }) => theme.colors.white};
 `;

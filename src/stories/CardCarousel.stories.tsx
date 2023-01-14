@@ -1,23 +1,21 @@
-import React from "react";
-import { ComponentStory } from "@storybook/react";
-import cards from "../constants/testimonailsCards";
+import React from 'react';
+import { ComponentStory } from '@storybook/react';
 
-import { CardCarousel } from "../components/CardCarousel";
+import cards from '@constants/testimonailsCards';
+import { CardCarousel } from '@components/CardCarousel';
 
 export default {
-  title: "CardCarousel",
+  title: 'CardCarousel',
   component: CardCarousel,
   argTypes: {},
   args: {
-    cards: cards,
+    cards,
   },
 };
 
-const Template: ComponentStory<typeof CardCarousel> = (args) => (
-  <CardCarousel {...args} />
-);
+const Template: ComponentStory<typeof CardCarousel> = (args) => <CardCarousel {...args} />;
 
 export const Basic = Template.bind({});
 Basic.args = {
-  title: "Testimonials",
+  title: 'Testimonials',
 };

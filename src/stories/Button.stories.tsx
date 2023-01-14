@@ -1,22 +1,22 @@
-import React from "react";
-import { ComponentStory } from "@storybook/react";
-import { BsPlayCircle } from "react-icons/bs";
+import React from 'react';
+import { ComponentStory } from '@storybook/react';
+import { BsPlayCircle } from 'react-icons/bs';
 
-import { Button } from "../components/Button";
+import { Button } from '@components/Button';
 
 export default {
-  title: "Button",
+  title: 'Button',
   component: Button,
   argTypes: {
     disabled: {
-      control: "boolean",
+      control: 'boolean',
     },
     icon: {
-      control: "none",
+      control: 'none',
     },
   },
   args: {
-    text: "Button text",
+    text: 'Button text',
     width: 200,
     height: 60,
   },
@@ -33,7 +33,7 @@ Disabled.args = {
 
 export const WithIconAndSizesConfigure = Template.bind({});
 WithIconAndSizesConfigure.args = {
-  text: "Watch the demo",
+  text: 'Watch the demo',
   icon: <BsPlayCircle />,
   width: 168,
   height: 46,

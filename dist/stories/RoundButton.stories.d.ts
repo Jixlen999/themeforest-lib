@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import { ComponentStory } from "@storybook/react";
+import { ComponentStory } from '@storybook/react';
 declare const _default: {
     title: string;
     component: ({ size, text, disabled, onClick, ...rest }: import("../types").IRoundButtonProps) => JSX.Element;

@@ -69,8 +69,7 @@ import e,{useEffect as t}from"react";import i,{ThemeProvider as n}from"styled-co
   &:active {
     background-color: ${({theme:e,disabled:t})=>!t&&e.colors.primary};
   }
-  border: ${({width:e})=>.08*e}px solid
-    ${({theme:e})=>e.colors.white};
+  border: ${({width:e})=>.08*e}px solid ${({theme:e})=>e.colors.white};
 `,m=t=>{var{size:i=200,text:l="Button text",disabled:a=!1,onClick:h}=t,c=r(t,["size","text","disabled","onClick"]);const{fontSize:m,fontWeight:f}=c;return e.createElement(n,{theme:o},e.createElement(p,{width:i,height:i,disabled:a},e.createElement(d,{width:i-.15*i,height:i-.15*i,onClick:a?void 0:h,disabled:a},e.createElement(s,{fontSize:m&&m,fontWeight:f&&f},l))))};var f={color:void 0,size:void 0,className:void 0,style:void 0,attr:void 0},g=e.createContext&&e.createContext(f),x=function(){return x=Object.assign||function(e){for(var t,i=1,n=arguments.length;i<n;i++)for(var r in t=arguments[i])Object.prototype.hasOwnProperty.call(t,r)&&(e[r]=t[r]);return e},x.apply(this,arguments)},u=function(e,t){var i={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(i[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var r=0;for(n=Object.getOwnPropertySymbols(e);r<n.length;r++)t.indexOf(n[r])<0&&Object.prototype.propertyIsEnumerable.call(e,n[r])&&(i[n[r]]=e[n[r]])}return i};function b(t){return t&&t.map((function(t,i){return e.createElement(t.tag,x({key:i},t.attr),b(t.child))}))}function y(t){return function(i){return e.createElement(w,x({attr:x({},t.attr)},i),b(t.child))}}function w(t){var i=function(i){var n,r=t.attr,o=t.size,l=t.title,a=u(t,["attr","size","title"]),h=o||i.size||"1em";return i.className&&(n=i.className),t.className&&(n=(n?n+" ":"")+t.className),e.createElement("svg",x({stroke:"currentColor",fill:"currentColor",strokeWidth:"0"},i.attr,r,a,{className:n,style:x(x({color:t.color||i.color},i.style),t.style),height:h,width:h,xmlns:"http://www.w3.org/2000/svg"}),l&&e.createElement("title",null,l),t.children)};return void 0!==g?e.createElement(g.Consumer,null,(function(e){return i(e)})):i(f)}function $(e){return y({tag:"svg",attr:{fill:"none",viewBox:"0 0 24 24",stroke:"currentColor"},child:[{tag:"path",attr:{strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:"2",d:"M7 16l-4-4m0 0l4-4m-4 4h18"}}]})(e)}function v(e){return y({tag:"svg",attr:{fill:"none",viewBox:"0 0 24 24",stroke:"currentColor"},child:[{tag:"path",attr:{strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:"2",d:"M17 8l4 4m0 0l-4 4m4-4H3"}}]})(e)}const k=i.div`
   display: flex;
   justify-content: space-between;
@@ -179,7 +178,7 @@ import e,{useEffect as t}from"react";import i,{ThemeProvider as n}from"styled-co
   padding: 15px 25px;
   background-color: transparent;
   border: none;
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -201,7 +200,7 @@ import e,{useEffect as t}from"react";import i,{ThemeProvider as n}from"styled-co
   background-color: white;
   color: ${({theme:e})=>e.colors.black};
   border-radius: 6px;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;

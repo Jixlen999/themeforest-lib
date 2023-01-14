@@ -1,15 +1,15 @@
-import React from "react";
-import { ThemeProvider } from "styled-components";
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
 
-import theme from "../../theme";
-import { IButtonProps } from "../../types";
+import theme from '@src/theme';
+import { IButtonProps } from '@src/types';
 
-import { ButtonWrapper, ButtonText, Icon } from "./styled";
+import { ButtonWrapper, ButtonText, Icon } from './styled';
 
 export const Button = ({
   width = 200,
   height = 60,
-  text = "Button text",
+  text = 'Button text',
   disabled = false,
   onClick,
   ...rest
@@ -23,13 +23,10 @@ export const Button = ({
         height={height}
         onClick={!disabled ? onClick : undefined}
         disabled={disabled}
-        icon={icon ? icon : null}
+        icon={icon || null}
       >
         {icon && <Icon>{icon}</Icon>}
-        <ButtonText
-          fontSize={fontSize && fontSize}
-          fontWeight={fontWeight && fontWeight}
-        >
+        <ButtonText fontSize={fontSize && fontSize} fontWeight={fontWeight && fontWeight}>
           {text}
         </ButtonText>
       </ButtonWrapper>

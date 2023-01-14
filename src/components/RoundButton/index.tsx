@@ -1,14 +1,14 @@
-import React from "react";
-import { ThemeProvider } from "styled-components";
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
 
-import theme from "../../theme";
-import { IRoundButtonProps } from "../../types";
+import theme from '@src/theme';
+import { IRoundButtonProps } from '@src/types';
 
-import { ButtonWrapper, ButtonText, ButtonContainer } from "./styled";
+import { ButtonWrapper, ButtonText, ButtonContainer } from './styled';
 
 export const RoundButton = ({
   size = 200,
-  text = "Button text",
+  text = 'Button text',
   disabled = false,
   onClick,
   ...rest
@@ -25,10 +25,7 @@ export const RoundButton = ({
           onClick={!disabled ? onClick : undefined}
           disabled={disabled}
         >
-          <ButtonText
-            fontSize={fontSize && fontSize}
-            fontWeight={fontWeight && fontWeight}
-          >
+          <ButtonText fontSize={fontSize && fontSize} fontWeight={fontWeight && fontWeight}>
             {text}
           </ButtonText>
         </ButtonWrapper>

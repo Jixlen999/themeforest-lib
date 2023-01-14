@@ -1,11 +1,12 @@
-import { useEffect } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect } from 'react';
 
 const useScroll = () => {
   let carousel: Element | null = null;
   let card: Element | null = null;
   useEffect(() => {
-    carousel = document.querySelector(".carousel");
-    card = document.querySelector(".card");
+    carousel = document.querySelector('.carousel');
+    card = document.querySelector('.card');
   }, []);
 
   const leftClickHandler = () => {

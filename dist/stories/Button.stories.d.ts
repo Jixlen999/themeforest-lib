@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import { ComponentStory } from "@storybook/react";
+import { ComponentStory } from '@storybook/react';
 declare const _default: {
     title: string;
     component: ({ width, height, text, disabled, onClick, ...rest }: import("../types").IButtonProps) => JSX.Element;

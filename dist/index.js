@@ -69,8 +69,7 @@
   &:active {
     background-color: ${({theme:e,disabled:t})=>!t&&e.colors.primary};
   }
-  border: ${({width:e})=>.08*e}px solid
-    ${({theme:e})=>e.colors.white};
+  border: ${({width:e})=>.08*e}px solid ${({theme:e})=>e.colors.white};
 `;var c={color:void 0,size:void 0,className:void 0,style:void 0,attr:void 0},s=e.createContext&&e.createContext(c),p=function(){return p=Object.assign||function(e){for(var t,i=1,r=arguments.length;i<r;i++)for(var n in t=arguments[i])Object.prototype.hasOwnProperty.call(t,n)&&(e[n]=t[n]);return e},p.apply(this,arguments)},m=function(e,t){var i={};for(var r in e)Object.prototype.hasOwnProperty.call(e,r)&&t.indexOf(r)<0&&(i[r]=e[r]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var n=0;for(r=Object.getOwnPropertySymbols(e);n<r.length;n++)t.indexOf(r[n])<0&&Object.prototype.propertyIsEnumerable.call(e,r[n])&&(i[r[n]]=e[r[n]])}return i};function f(t){return t&&t.map((function(t,i){return e.createElement(t.tag,p({key:i},t.attr),f(t.child))}))}function g(t){return function(i){return e.createElement(u,p({attr:p({},t.attr)},i),f(t.child))}}function u(t){var i=function(i){var r,n=t.attr,o=t.size,l=t.title,a=m(t,["attr","size","title"]),h=o||i.size||"1em";return i.className&&(r=i.className),t.className&&(r=(r?r+" ":"")+t.className),e.createElement("svg",p({stroke:"currentColor",fill:"currentColor",strokeWidth:"0"},i.attr,n,a,{className:r,style:p(p({color:t.color||i.color},i.style),t.style),height:h,width:h,xmlns:"http://www.w3.org/2000/svg"}),l&&e.createElement("title",null,l),t.children)};return void 0!==s?e.createElement(s.Consumer,null,(function(e){return i(e)})):i(c)}function x(e){return g({tag:"svg",attr:{fill:"none",viewBox:"0 0 24 24",stroke:"currentColor"},child:[{tag:"path",attr:{strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:"2",d:"M7 16l-4-4m0 0l4-4m-4 4h18"}}]})(e)}function b(e){return g({tag:"svg",attr:{fill:"none",viewBox:"0 0 24 24",stroke:"currentColor"},child:[{tag:"path",attr:{strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:"2",d:"M17 8l4 4m0 0l-4 4m4-4H3"}}]})(e)}const y=t.div`
   display: flex;
   justify-content: space-between;
@@ -179,7 +178,7 @@
   padding: 15px 25px;
   background-color: transparent;
   border: none;
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -201,7 +200,7 @@
   background-color: white;
   color: ${({theme:e})=>e.colors.black};
   border-radius: 6px;
-  font-family: "Manrope";
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;

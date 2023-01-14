@@ -1,7 +1,6 @@
-import { ReactNode } from "react";
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { IButton, IButtonText } from "../../types";
+import { IButton, IButtonText } from '@src/types';
 
 export const ButtonWrapper = styled.div<IButton>`
   box-sizing: border-box;
@@ -20,31 +19,27 @@ export const ButtonWrapper = styled.div<IButton>`
   gap: ${({ theme }) => theme.gap[10]}px;
   color: ${({ theme }) => theme.colors.white};
   cursor: ${({ disabled }) => {
-    if (disabled) return "not-allowed";
-    return "pointer";
+    if (disabled) return 'not-allowed';
+    return 'pointer';
   }};
   transition: ${({ theme }) => theme.transition};
   box-shadow: ${({ theme, disabled }) => {
-    if (disabled) return "none";
+    if (disabled) return 'none';
     return theme.shadows.button;
   }};
   &:hover {
-    background-color: ${({ theme, disabled }) =>
-      !disabled && theme.colors.hoverBlue};
+    background-color: ${({ theme, disabled }) => !disabled && theme.colors.hoverBlue};
   }
   &:active {
-    box-shadow: ${({ disabled }) => !disabled && "none"};
-    background-color: ${({ theme, disabled }) =>
-      !disabled && theme.colors.primary};
+    box-shadow: ${({ disabled }) => !disabled && 'none'};
+    background-color: ${({ theme, disabled }) => !disabled && theme.colors.primary};
   }
 `;
 
 export const ButtonText = styled.p<IButtonText>`
   font-family: ${({ theme }) => theme.fontFamily.Manrope};
-  font-weight: ${({ theme, fontWeight }) =>
-    fontWeight ? fontWeight : theme.fontWeight[700]};
-  font-size: ${({ theme, fontSize }) =>
-    fontSize ? fontSize : theme.fontSize[16]}px;
+  font-weight: ${({ theme, fontWeight }) => fontWeight || theme.fontWeight[700]};
+  font-size: ${({ theme, fontSize }) => fontSize || theme.fontSize[16]}px;
   line-height: ${({ theme }) => theme.lineHeight[24]}px;
   overflow: hidden;
 `;

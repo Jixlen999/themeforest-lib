@@ -12,5 +12,7 @@
     "declaration": true,
     "strictNullChecks": true,
     "noImplicitAny": true
-  }
+  },
+  "include": ["src"],
+  "extends": "./tsconfig.paths.json"
 }
