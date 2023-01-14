@@ -12,7 +12,8 @@
     "build": "rollup -c --bundleConfigAsCjs",
     "watch": "npm-watch",
     "lint": "eslint . --fix --max-warnings=0",
-    "format": "prettier . --write"
+    "format": "prettier . --write",
+    "prepare": "husky install"
   },
   "watch": {
     "build": {
@@ -80,5 +81,12 @@
   },
   "dependencies": {
     "react-icons": "^4.7.1"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run lint",
+      "npm run format"
+    ]
   }
 }
+
