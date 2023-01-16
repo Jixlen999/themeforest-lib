@@ -18,6 +18,7 @@ declare const theme: {
         120: number;
         126: number;
         132: number;
+        200: number;
         370: number;
         580: number;
         590: number;
@@ -47,6 +48,7 @@ declare const theme: {
         800: number;
     };
     gap: {
+        5: number;
         10: number;
         15: number;
         25: number;
@@ -64,6 +66,8 @@ declare const theme: {
         66: number;
     };
     margin: {
+        12: number;
+        20: number;
         30: number;
         50: number;
         75: number;

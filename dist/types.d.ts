@@ -42,4 +42,15 @@ export interface ICardCarouselProps {
     title: string | undefined;
     cards: Array<ICard>;
 }
+export interface IPostCard {
+    title: string;
+    date: string;
+    image: string;
+    text: string;
+    readMoreLink: string;
+}
+export interface IPostsCarouselProps {
+    title: string;
+    posts: Array<IPostCard>;
+}
 export {};

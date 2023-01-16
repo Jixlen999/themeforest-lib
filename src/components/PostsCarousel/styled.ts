@@ -47,15 +47,13 @@ export const ControlButton = styled.div`
   }
 `;
 
-export const Cards = styled.div`
+export const Posts = styled.div`
   width: inherit;
-  height: ${({ theme }) => theme.height[370]}px;
+  height: auto;
   display: flex;
   flex-direction: row;
-  align-items: stretch;
   padding: 0px;
   gap: ${({ theme }) => theme.gap[30]}px;
-  padding: ${({ theme }) => theme.padding[10]}px;
   overflow-x: scroll;
   scroll-behavior: smooth;
   scrollbar-width: none;
@@ -64,56 +62,49 @@ export const Cards = styled.div`
   }
 `;
 
-export const Card = styled.div`
+export const Post = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: ${({ theme }) => theme.padding[35]}px;
-  gap: ${({ theme }) => theme.gap[25]}px;
   width: ${({ theme }) => theme.width[350]}px;
-  box-shadow: ${({ theme }) => theme.shadows.card3};
   background-color: ${({ theme }) => theme.colors.white};
   flex-basis: ${({ theme }) => theme.flexBasis[25]}%;
   flex-shrink: 0;
 `;
-export const CardImage = styled.img`
-  width: ${({ theme }) => theme.width[80]}px;
-  height: ${({ theme }) => theme.height[80]}px;
-  border-radius: ${({ theme }) => theme.borderRadius[100]}%;
+export const PostImage = styled.img`
+  width: ${({ theme }) => theme.width[350]}px;
+  min-height: ${({ theme }) => theme.height[200]}px;
+  border-radius: ${({ theme }) => theme.borderRadius[6]};
   overflow: hidden;
+  margin-bottom: ${({ theme }) => theme.margin[20]}px;
 `;
-export const CardName = styled.div`
+export const PostTitle = styled.div`
+  width: inherit;
   font-family: ${({ theme }) => theme.fontFamily.Manrope};
   font-weight: ${({ theme }) => theme.fontWeight[700]};
-  font-size: ${({ theme }) => theme.fontSize[16]}px;
-  line-height: ${({ theme }) => theme.lineHeight[24]}px;
+  font-size: ${({ theme }) => theme.fontSize[22]}px;
+  line-height: ${({ theme }) => theme.lineHeight[33]}px;
+  text-align: start;
+  margin-bottom: ${({ theme }) => theme.margin[12]}px;
 `;
-export const CardPosition = styled.div`
-  font-family: ${({ theme }) => theme.fontFamily.Manrope};
-  font-weight: ${({ theme }) => theme.fontWeight[500]};
+export const PostDate = styled.div`
+  font-family: ${({ theme }) => theme.fontFamily.OpenSans};
+  font-weight: ${({ theme }) => theme.fontWeight[400]};
   font-size: ${({ theme }) => theme.fontSize[14]}px;
   line-height: ${({ theme }) => theme.lineHeight[24]}px;
+  margin-bottom: ${({ theme }) => theme.margin[12]}px;
+  color: ${({ theme }) => theme.colors.grey};
 `;
-export const CardComment = styled.div`
+export const PostText = styled.div`
+  width: inherit;
   font-family: ${({ theme }) => theme.fontFamily.OpenSans};
   font-weight: ${({ theme }) => theme.fontWeight[400]};
   font-size: ${({ theme }) => theme.fontSize[16]}px;
   line-height: ${({ theme }) => theme.lineHeight[28]}px;
   color: ${({ theme }) => theme.colors.grey};
+  margin-bottom: ${({ theme }) => theme.margin[12]}px;
 `;
 
-export const CardHeader = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: ${({ theme }) => theme.gap[25]}px;
-`;
-
-export const CardNameAndPosition = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-`;
 export const ControlButtonRight = styled.div`
   width: ${({ theme }) => theme.width[110]}px;
   height: inherit;
@@ -121,4 +112,19 @@ export const ControlButtonRight = styled.div`
 export const ControlButtonLeft = styled.div`
   width: ${({ theme }) => theme.width[110]}px;
   height: inherit;
+`;
+
+export const ReadMoreLink = styled.p`
+  display: flex;
+  align-items: center;
+  color: ${({ theme }) => theme.colors.primary};
+  gap: ${({ theme }) => theme.gap[5]}px;
+  font-family: ${({ theme }) => theme.fontFamily.Manrope};
+  font-weight: ${({ theme }) => theme.fontWeight[600]};
+  font-size: ${({ theme }) => theme.fontSize[14]}px;
+  cursor: pointer;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 `;

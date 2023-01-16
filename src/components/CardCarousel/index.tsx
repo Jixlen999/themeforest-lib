@@ -15,6 +15,7 @@ import {
   CardNameAndPosition,
   CardPosition,
   Cards,
+  Container,
   ControlButton,
   ControlButtonLeft,
   ControlButtonRight,
@@ -24,39 +25,41 @@ import {
 } from './styled';
 
 export const CardCarousel = ({ title, cards }: ICardCarouselProps) => {
-  const { leftClickHandler, rightClickHandler } = useScroll();
+  const { leftClickHandler, rightClickHandler } = useScroll('cardsCarousel');
 
   return (
     <ThemeProvider theme={theme}>
-      <TitleAndControls>
-        <Title>{title}</Title>
-        <Controls>
-          <ControlButtonLeft onClick={leftClickHandler}>
-            <ControlButton>
-              <HiOutlineArrowNarrowLeft />
-            </ControlButton>
-          </ControlButtonLeft>
-          <ControlButtonRight onClick={rightClickHandler}>
-            <ControlButton>
-              <HiOutlineArrowNarrowRight />
-            </ControlButton>
-          </ControlButtonRight>
-        </Controls>
-      </TitleAndControls>
-      <Cards className="carousel">
-        {cards.map((cardItem, index) => (
-          <Card key={index} className="card">
-            <CardHeader>
-              <CardImage src={cardItem.image} />
-              <CardNameAndPosition>
-                <CardName>{cardItem.name}</CardName>
-                <CardPosition>{cardItem.position}</CardPosition>
-              </CardNameAndPosition>
-            </CardHeader>
-            <CardComment>{cardItem.comment}</CardComment>
-          </Card>
-        ))}
-      </Cards>
+      <Container>
+        <TitleAndControls>
+          <Title>{title}</Title>
+          <Controls>
+            <ControlButtonLeft onClick={leftClickHandler}>
+              <ControlButton>
+                <HiOutlineArrowNarrowLeft />
+              </ControlButton>
+            </ControlButtonLeft>
+            <ControlButtonRight onClick={rightClickHandler}>
+              <ControlButton>
+                <HiOutlineArrowNarrowRight />
+              </ControlButton>
+            </ControlButtonRight>
+          </Controls>
+        </TitleAndControls>
+        <Cards className="cardsCarousel">
+          {cards.map((cardItem, index) => (
+            <Card key={index} className="card">
+              <CardHeader>
+                <CardImage src={cardItem.image} />
+                <CardNameAndPosition>
+                  <CardName>{cardItem.name}</CardName>
+                  <CardPosition>{cardItem.position}</CardPosition>
+                </CardNameAndPosition>
+              </CardHeader>
+              <CardComment>{cardItem.comment}</CardComment>
+            </Card>
+          ))}
+        </Cards>
+      </Container>
     </ThemeProvider>
   );
 };

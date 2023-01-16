@@ -1,22 +1,28 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from 'react';
 
-const useScroll = () => {
+const useScroll = (type: string) => {
   let carousel: Element | null = null;
-  let card: Element | null = null;
+  let scrollItem: Element | null = null;
   useEffect(() => {
-    carousel = document.querySelector('.carousel');
-    card = document.querySelector('.card');
+    if (type === 'cardsCarousel') {
+      carousel = document.querySelector('.cardsCarousel');
+      scrollItem = document.querySelector('.card');
+    }
+    if (type === 'postsCarousel') {
+      carousel = document.querySelector('.postsCarousel');
+      scrollItem = document.querySelector('.post');
+    }
   }, []);
 
   const leftClickHandler = () => {
     const padding = 30;
-    carousel!.scrollLeft -= card!.clientWidth + padding;
+    carousel!.scrollLeft -= scrollItem!.clientWidth + padding;
   };
 
   const rightClickHandler = () => {
     const padding = 30;
-    carousel!.scrollLeft += card!.clientWidth + padding;
+    carousel!.scrollLeft += scrollItem!.clientWidth + padding;
   };
 
   return { leftClickHandler, rightClickHandler };

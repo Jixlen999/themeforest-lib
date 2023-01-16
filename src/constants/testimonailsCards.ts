@@ -1,6 +1,6 @@
-import img_person_1 from '../assets/img_person_1.png';
-import img_person_2 from '../assets/img_person_2.png';
-import img_person_3 from '../assets/img_person_3.png';
+import img_person_1 from '@src/assets/img_person_1.png';
+import img_person_2 from '@src/assets/img_person_2.png';
+import img_person_3 from '@src/assets/img_person_3.png';
 
 const cards = [
   {
